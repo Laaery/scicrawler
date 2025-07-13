@@ -1,6 +1,10 @@
 # SciCrawler⛏
 ## Overview
 A text crawling tool modified on Scrapy for scientific community, especially chemistry, material science, biology and environmental science.
+## Prerequisites
+1. Python 3.8 or higher
+2. MongoDB server (local or remote)
+3. API keys for publisher platforms (where required)
 ## Installation
 ```bash
 git clone https://github.com/Laaery/scicrawler.git
