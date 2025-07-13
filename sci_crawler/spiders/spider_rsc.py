@@ -72,9 +72,6 @@ class SpiderRsc(scrapy.Spider):
         # base_url = "http://xlink.rsc.org/?DOI="
         # base_url = "http://dx.doi.org/"
 
-        # Create a list of dict. Format as [{"doi":"", "url":""}].
-        # doi_urls = [{"doi": doi, "url": base_url + doi.split('/')[1]} for doi in self.doi_list]
-
         # Save doi_urls to a csv file.
         doi_urls = [{"doi": doi, "url": "wait"} for doi in self.doi_list]
         return doi_urls

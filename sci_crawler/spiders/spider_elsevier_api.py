@@ -175,21 +175,6 @@ class SpiderElsApi(scrapy.Spider):
         except Exception as e:
             pass
 
-        # < object
-        # xmlns = "http://www.elsevier.com/xml/svapi/article/dtd"
-        # ref = "gr2"
-        # category = "high"
-        # type = "IMAGE-HIGH-RES"
-        # multimediatype = "JPEG image file"
-        # mimetype = "image/jpeg"
-        # width = "1500"
-        # height = "1167"
-        # size = "144760" > https: // api.elsevier.com / content / object / eid / 1 - s2
-        # .0 - S0040603122000028 - gr2_lrg.jpg?httpAccept = %2
-        # A % 2
-        # F % 2
-        # A < / object >
-
     # Parse supplementary information(SI)
     @staticmethod
     def parse_si(response):
@@ -262,30 +247,6 @@ class SpiderElsApi(scrapy.Spider):
         para_text = re.sub(r'</ns0:para>$', '\n\n', para_text)
 
         return para_text
-
-    # def xml2markdown(self, sections, level=1, full_text=""):
-    #     """
-    #     Recursively parse XML element and convert it to markdown format.
-    #
-    #     Args:
-    #         sections(xml.etree.ElementTree.Element): XML element for full text.
-    #         level(int): Level of header.
-    #         full_text(str): Full text in markdown format.
-    #
-    #     Returns:
-    #         str: Full text in markdown format.
-    #     """
-    #     if sections.findall('{http://www.elsevier.com/xml/common/dtd}section') is not None:
-    #         # Recursively parse subsections
-    #         for section in sections.findall('{http://www.elsevier.com/xml/common/dtd}section'):
-    #             header = self.convert_header('{http://www.elsevier.com/xml/common/dtd}', level, section)
-    #             full_text += header
-    #             for para in section.findall('{http://www.elsevier.com/xml/common/dtd}para'):
-    #                 para_text = self.process_paragraph(para)
-    #                 full_text += para_text
-    #                 self.xml2markdown(section, level + 1, full_text)
-    #     else:
-    #         return full_text
 
     def generate_doi_urls(self, doi_list_file):
         with open(doi_list_file, 'r') as f:
