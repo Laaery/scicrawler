@@ -15,7 +15,7 @@ pip install -r requirements.txt
 python run_spider.py \
     --spider spider_elsevier_api \
     --domain api.elsevier.com \
-    --doi_file ./doi_list/doi.csv \
+    --doi_file ./doi_list/your_doi.csv \
     --publisher Elsevier \
     --api_key YOUR_API_KEY
 ```
