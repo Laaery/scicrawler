@@ -175,7 +175,6 @@ class SpiderElsApi(scrapy.Spider):
         except Exception as e:
             pass
 
-        # TODO: Extract figures
         # < object
         # xmlns = "http://www.elsevier.com/xml/svapi/article/dtd"
         # ref = "gr2"

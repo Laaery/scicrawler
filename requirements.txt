@@ -1,0 +1,12 @@
+crossref==0.1.2
+itemadapter==0.8.0
+itemloaders==1.1.0
+pdf_tools==0.2.0
+pdfquery==0.4.3
+pymongo==4.5.0
+Requests==2.32.4
+Scrapy==2.10.1
+selenium==4.34.2
+tqdm==4.66.1
+Twisted==22.10.0
+w3lib==2.1.2
