@@ -15,7 +15,15 @@ pip install -r requirements.txt
 python run_spider.py \
     --spider spider_elsevier_api \
     --domain api.elsevier.com \
-    --doi_file ./doi_list/doi.csv \
+    --doi_file ./doi_list/your_doi.csv \
     --publisher Elsevier \
     --api_key YOUR_API_KEY
 ```
+## Legal and Ethical Considerations
+Important: Users are solely responsible for complying with:
+- Publisher terms of service
+- Copyright laws
+- API rate limits
+- Robots.txt directives
+
+**Disclaimer**: This tool is provided for research purposes only. The developers are not responsible for any misuse or violations of publisher policies committed by users.
